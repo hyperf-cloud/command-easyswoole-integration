@@ -1,5 +1,5 @@
 {
-    "name": "hyperf-cloud/easyswoole-command",
+    "name": "hyperf/command-easyswoole",
     "type": "library",
     "license": "MIT",
     "keywords": [
@@ -9,7 +9,7 @@
     "description": "HyperfCommand for EasySwoole",
     "autoload": {
         "psr-4": {
-            "HyperfCloud\\EasyswooleCommand\\": "src/"
+            "Hyperf\\CommandEasyswoole\\": "src/"
         }
     },
     "autoload-dev": {
@@ -25,8 +25,9 @@
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.14",
-        "phpstan/phpstan": "^0.10.5",
         "hyperf/testing": "1.1.*",
+        "mockery/mockery": "^1.2",
+        "phpstan/phpstan": "^0.10.5",
         "swoft/swoole-ide-helper": "dev-master"
     },
     "bin": [
