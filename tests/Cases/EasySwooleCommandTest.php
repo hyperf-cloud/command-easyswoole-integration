@@ -16,8 +16,6 @@ use EasySwoole\EasySwoole\Command\CommandInterface;
 use Hyperf\CommandEasyswoole\EasySwooleCommand;
 use Mockery;
 use PHPUnit\Framework\TestCase;
-use Symfony\Component\Console\Input\ArgvInput;
-use Symfony\Component\Console\Output\ConsoleOutput;
 
 /**
  * @internal
@@ -34,10 +32,8 @@ class EasySwooleCommandTest extends TestCase
     {
         $command = Mockery::mock(CommandInterface::class);
         $command->shouldReceive('commandName')->andReturn('demo');
-        $command->shouldReceive('exec')->andReturn('exec');
 
         $hyperfCommand = new EasySwooleCommand($command);
         $this->assertSame('demo', $hyperfCommand->getName());
-        // var_dump($hyperfCommand->handle(new ArgvInput(),new ConsoleOutput()));
     }
 }
