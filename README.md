@@ -9,5 +9,5 @@ EasySwoole 的自定义命令还是十分简单的，所以有些功能需要自
 ## 安装
 
 ```
-composer create-project hyperf-cloud/easyswoole-command
+composer require hyperf/command-easyswoole
 ```
