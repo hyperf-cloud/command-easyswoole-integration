@@ -13,7 +13,6 @@ declare(strict_types=1);
 namespace Hyperf\CommandEasyswoole;
 
 use EasySwoole\EasySwoole\Command\CommandInterface;
-use EasySwoole\EasySwoole\Core;
 use Hyperf\Command\Command;
 use Symfony\Component\Console\Input\InputOption;
 

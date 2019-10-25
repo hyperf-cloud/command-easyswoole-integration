@@ -10,8 +10,18 @@ declare(strict_types=1);
  * @license  https://github.com/hyperf/hyperf/blob/master/LICENSE
  */
 
-require_once dirname(dirname(__FILE__)) . '/vendor/autoload.php';
+namespace HyperfTest\Stub;
 
-use EasySwoole\EasySwoole\Command\CommandRunner;
+use Hyperf\Command\Command;
 
-CommandRunner::getInstance();
+class DemoCommand extends Command
+{
+    public function __construct()
+    {
+        parent::__construct('demo:command');
+    }
+
+    public function handle()
+    {
+    }
+}

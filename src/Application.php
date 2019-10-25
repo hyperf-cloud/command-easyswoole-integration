@@ -23,7 +23,7 @@ class Application implements ApplicationInterface
 {
     use Singleton;
 
-    protected $commands;
+    protected $commands = [];
 
     public function __construct()
     {
@@ -43,11 +43,21 @@ class Application implements ApplicationInterface
         $this->commands[] = $command;
     }
 
+    /**
+     * @return Command[]
+     */
+    public function getCommands()
+    {
+        return $this->commands;
+    }
+
     public function run()
     {
         $application = new SymfonyApplication();
         foreach ($this->commands as $command) {
-            $application->add($command);
+            if ($command instanceof  Command) {
+                $application->add($command);
+            }
         }
 
         if (in_array('produce', $_SERVER['argv'])) {
