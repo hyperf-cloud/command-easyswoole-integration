@@ -11,7 +11,7 @@ declare(strict_types=1);
  */
 
 use EasySwoole\EasySwoole\Command\CommandRunner;
-use HyperfCloud\EasyswooleCommand\Application;
+use Hyperf\CommandEasyswoole\Application;
 
 defined('IN_PHAR') or define('IN_PHAR', boolval(\Phar::running(false)));
 defined('RUNNING_ROOT') or define('RUNNING_ROOT', realpath(getcwd()));
